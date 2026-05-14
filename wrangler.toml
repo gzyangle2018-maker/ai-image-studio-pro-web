@@ -9,7 +9,7 @@ bucket = "./dist"
 [[d1_databases]]
 binding = "DB"
 database_name = "ai-studio-db"
-database_id = "your-d1-database-id"
+database_id = "ee15f3d6-3d80-4e80-af2b-b22f1c4e8c91"
 
 # R2 存储桶
 [[r2_buckets]]
