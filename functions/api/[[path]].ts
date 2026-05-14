@@ -27,7 +27,9 @@ export const onRequestOptions = async (): Promise<Response> => {
 export const onRequest = async (context: { request: Request; env: Env; params: { path: string } }): Promise<Response> => {
   const { request, env, params } = context;
   const url = new URL(request.url);
-  const path = params.path || '';
+  let path = params.path || '';
+  if (Array.isArray(path)) path = path.join('/');
+  if (typeof path !== 'string') path = String(path);
   const method = request.method;
 
   try {
